@@ -18,8 +18,8 @@ public class AppTest {
     private static final String PASSWORD = "epam.bstu";
     private static final String SEARCH_EPAM = "epam";
     private static final String MESSAGE_EPAM = "*";
-   // private static final String MESSAGE_EPAM = "Кто такой Джон Голт?";
-    private static final String NAME_EPAM = "Яна Дронина";
+   // private static final String MESSAGE_EPAM = "ГЉГІГ® ГІГ ГЄГ®Г© Г„Г¦Г®Г­ ГѓГ®Г«ГІ?";
+    private static final String NAME_EPAM = "ГџГ­Г  Г„Г°Г®Г­ГЁГ­Г ";
     private static final String COMMENT_EPAM = "Retweet";
     private static final String JACK_EPAM = "epam2!!!";
 
@@ -34,35 +34,39 @@ public class AppTest {
         steps.initBrowser();
     }
 
-    //вход
+    //ГўГµГ®Г¤
     @Test(description = "login to Twitter")
     public void logInTw() {
         steps.logInTw(EMAIL, PASSWORD);
         Assert.assertTrue(steps.isLoggedIn());
+        System.out.println("login to Twitter");
     }
-    //выход
+    //ГўГ»ГµГ®Г¤
     @Test(description = "logOut to Twitter")
     public void logOutTw(){
         steps.logOutTw(EMAIL, PASSWORD);
         Assert.assertTrue(steps.isLoggedOut());
+        System.out.println("logOut to Twitter");
     }
 
 
-    //поиск
+    //ГЇГ®ГЁГ±ГЄ
     @Test(description = "Search in Twitter")
     public void searchTw(){
         steps.logInTw(EMAIL, PASSWORD);
         steps.searchTw(SEARCH_EPAM);
         Assert.assertTrue(steps.isSearched());
+        System.out.println("Search to Twitter");
     }
 
 
 
-    //твит
+    //ГІГўГЁГІ
     @Test(description = "Tweet on twitter")
     public void tweetTw(){
         steps.tweetTw(EMAIL,PASSWORD,TWEET);
         Assert.assertTrue(steps.isTweet());
+        System.out.println("Tweet to Twitter");
     }
 
 //follow
@@ -70,6 +74,7 @@ public class AppTest {
     public void followTw() {
         steps.followTw(EMAIL,PASSWORD,SEARCH_EPAM);
         Assert.assertTrue(steps.isFollowers());
+        System.out.println("Follow to Twitter");
     }
 
 
@@ -77,12 +82,14 @@ public class AppTest {
     public void likeTw() {
         steps.likeTw(EMAIL,PASSWORD);
         Assert.assertTrue(steps.isLikes());
+        System.out.println("like to Twitter");
     }
 /*
     @Test(description = "Message on Twitter")
     public void messageTw() {
         steps.messageTw(EMAIL, PASSWORD, NAME_EPAM, MESSAGE_EPAM);
         Assert.assertTrue(steps.isMessages());
+        System.out.println("Message to Twitter");
     }
 
 */
@@ -90,6 +97,7 @@ public class AppTest {
     public void retweetTw() {
         steps.retweetTw(EMAIL,PASSWORD,COMMENT_EPAM);
         Assert.assertTrue(steps.isRetweet());
+        System.out.println("Retweet to Twitter");
     }
 
 
@@ -97,6 +105,7 @@ public class AppTest {
     public void jackDorseyTw() {
         steps.JackDorseyTw(EMAIL,PASSWORD,JACK_EPAM);
         Assert.assertTrue(steps.isJackDorsey());
+        System.out.println("Jack to Twitter");
     }
 
 
