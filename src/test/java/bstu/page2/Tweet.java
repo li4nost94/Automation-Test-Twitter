@@ -46,7 +46,8 @@ public class Tweet extends AbstractPage{
         //tweet
         tweetBox.click();
         tweetBox.sendKeys(text);
-        tweetButton.click();
+       // tweetButton.click();
+         driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[2]/div[2]/div/form/div[2]/div[2]/button")).click();
 
     }
 
